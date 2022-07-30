@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CustomSymptomRow" customModule="CovidTrackingApp" customModuleProvider="target">
+            <connections>
+                <outlet property="btnLow" destination="qsv-zf-kFz" id="Gnz-Xu-kvC"/>
+                <outlet property="btnModerate" destination="mFE-iH-6uh" id="Bx1-5y-Evd"/>
+                <outlet property="btnSevere" destination="eHF-gZ-91O" id="pcv-sS-hAW"/>
+                <outlet property="lblSymptomName" destination="Kf2-9t-GTg" id="2qb-Ef-RFC"/>
+                <outlet property="vwLow" destination="oeI-jD-uaV" id="YFg-LA-xTH"/>
+                <outlet property="vwLowInner" destination="rJP-vv-krE" id="Eu3-7K-JsT"/>
+                <outlet property="vwModerate" destination="Zph-MZ-WgC" id="K6R-9W-Hh8"/>
+                <outlet property="vwModerateInner" destination="Ww6-gw-G7f" id="RDo-Ld-RB4"/>
+                <outlet property="vwSevere" destination="FIN-6X-8qv" id="yFF-8g-kAH"/>
+                <outlet property="vwSevereInner" destination="y0y-VI-IKD" id="gfI-m5-o7m"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="BG3-gj-myY">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="70"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kf2-9t-GTg">
+                    <rect key="frame" x="10" y="17" width="199" height="43"/>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                    <color key="textColor" name="colorTitleDarkBlue"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FIN-6X-8qv" userLabel="Severe View">
+                    <rect key="frame" x="259" y="22" width="25" height="25"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y0y-VI-IKD">
+                            <rect key="frame" x="6.5" y="6.5" width="12" height="12"/>
+                            <color key="backgroundColor" name="checkBoxNotSelected"/>
+                        </view>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eHF-gZ-91O">
+                            <rect key="frame" x="0.0" y="0.0" width="25" height="25"/>
+                            <connections>
+                                <action selector="severePressed:" destination="-1" eventType="touchUpInside" id="MgQ-Bi-Fwf"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="eHF-gZ-91O" firstAttribute="height" secondItem="FIN-6X-8qv" secondAttribute="height" id="6hD-0H-BTf"/>
+                        <constraint firstAttribute="height" constant="25" id="Est-rI-LNl"/>
+                        <constraint firstItem="y0y-VI-IKD" firstAttribute="centerX" secondItem="FIN-6X-8qv" secondAttribute="centerX" id="PJL-my-Amc"/>
+                        <constraint firstItem="eHF-gZ-91O" firstAttribute="centerY" secondItem="FIN-6X-8qv" secondAttribute="centerY" id="QcI-pa-73X"/>
+                        <constraint firstAttribute="width" constant="25" id="RgM-0G-NjJ"/>
+                        <constraint firstItem="eHF-gZ-91O" firstAttribute="width" secondItem="FIN-6X-8qv" secondAttribute="width" id="aq6-oq-woC"/>
+                        <constraint firstItem="y0y-VI-IKD" firstAttribute="height" secondItem="FIN-6X-8qv" secondAttribute="height" multiplier="0.48" id="eHC-ko-8EB"/>
+                        <constraint firstItem="eHF-gZ-91O" firstAttribute="centerX" secondItem="FIN-6X-8qv" secondAttribute="centerX" id="jiB-34-kr1"/>
+                        <constraint firstItem="y0y-VI-IKD" firstAttribute="centerY" secondItem="FIN-6X-8qv" secondAttribute="centerY" id="qjz-6i-ezu"/>
+                        <constraint firstItem="y0y-VI-IKD" firstAttribute="width" secondItem="FIN-6X-8qv" secondAttribute="width" multiplier="0.48" id="ugQ-fJ-KND"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zph-MZ-WgC" userLabel="Moderate View">
+                    <rect key="frame" x="319" y="22" width="25" height="25"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ww6-gw-G7f">
+                            <rect key="frame" x="6.5" y="6.5" width="12" height="12"/>
+                            <color key="backgroundColor" name="checkBoxNotSelected"/>
+                        </view>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mFE-iH-6uh">
+                            <rect key="frame" x="0.0" y="0.0" width="25" height="25"/>
+                            <connections>
+                                <action selector="moderatePressed:" destination="-1" eventType="touchUpInside" id="Z2N-9G-3vH"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="mFE-iH-6uh" firstAttribute="centerY" secondItem="Zph-MZ-WgC" secondAttribute="centerY" id="5I2-YG-hUD"/>
+                        <constraint firstAttribute="width" constant="25" id="65V-WL-Ux2"/>
+                        <constraint firstItem="mFE-iH-6uh" firstAttribute="width" secondItem="Zph-MZ-WgC" secondAttribute="width" id="D6j-Xi-Z8r"/>
+                        <constraint firstItem="Ww6-gw-G7f" firstAttribute="width" secondItem="Zph-MZ-WgC" secondAttribute="width" multiplier="0.48" id="FF1-2l-NzM"/>
+                        <constraint firstItem="mFE-iH-6uh" firstAttribute="height" secondItem="Zph-MZ-WgC" secondAttribute="height" id="Qbh-Cs-4XA"/>
+                        <constraint firstAttribute="height" constant="25" id="TMG-Ty-sGc"/>
+                        <constraint firstItem="Ww6-gw-G7f" firstAttribute="centerX" secondItem="Zph-MZ-WgC" secondAttribute="centerX" id="Ul9-0s-8Oa"/>
+                        <constraint firstItem="mFE-iH-6uh" firstAttribute="centerX" secondItem="Zph-MZ-WgC" secondAttribute="centerX" id="eBV-vd-h2l"/>
+                        <constraint firstItem="Ww6-gw-G7f" firstAttribute="height" secondItem="Zph-MZ-WgC" secondAttribute="height" multiplier="0.48" id="huq-lh-nFy"/>
+                        <constraint firstItem="Ww6-gw-G7f" firstAttribute="centerY" secondItem="Zph-MZ-WgC" secondAttribute="centerY" id="umg-kf-l64"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oeI-jD-uaV" userLabel="LowView">
+                    <rect key="frame" x="379" y="22" width="25" height="25"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rJP-vv-krE">
+                            <rect key="frame" x="6.5" y="6.5" width="12" height="12"/>
+                            <color key="backgroundColor" name="checkBoxNotSelected"/>
+                        </view>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qsv-zf-kFz">
+                            <rect key="frame" x="0.0" y="0.0" width="25" height="25"/>
+                            <connections>
+                                <action selector="lowPressed:" destination="-1" eventType="touchUpInside" id="Pqc-PJ-nng"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="qsv-zf-kFz" firstAttribute="centerX" secondItem="oeI-jD-uaV" secondAttribute="centerX" id="3Eq-gD-q8N"/>
+                        <constraint firstItem="rJP-vv-krE" firstAttribute="centerX" secondItem="oeI-jD-uaV" secondAttribute="centerX" id="9Gv-fG-JNb"/>
+                        <constraint firstItem="rJP-vv-krE" firstAttribute="width" secondItem="oeI-jD-uaV" secondAttribute="width" multiplier="0.48" id="AQN-RO-Lbv"/>
+                        <constraint firstItem="rJP-vv-krE" firstAttribute="centerY" secondItem="oeI-jD-uaV" secondAttribute="centerY" id="DIq-UC-QOw"/>
+                        <constraint firstAttribute="width" constant="25" id="I9J-mR-fnb"/>
+                        <constraint firstAttribute="height" constant="25" id="cTD-tv-tSe"/>
+                        <constraint firstItem="qsv-zf-kFz" firstAttribute="width" secondItem="oeI-jD-uaV" secondAttribute="width" id="feb-8f-vqC"/>
+                        <constraint firstItem="qsv-zf-kFz" firstAttribute="centerY" secondItem="oeI-jD-uaV" secondAttribute="centerY" id="gK8-PV-ho3"/>
+                        <constraint firstItem="rJP-vv-krE" firstAttribute="height" secondItem="oeI-jD-uaV" secondAttribute="height" multiplier="0.48" id="qCq-9b-Y76"/>
+                        <constraint firstItem="qsv-zf-kFz" firstAttribute="height" secondItem="oeI-jD-uaV" secondAttribute="height" id="rki-y0-z6m"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="AZw-Sx-zJ0"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="oeI-jD-uaV" firstAttribute="top" secondItem="BG3-gj-myY" secondAttribute="top" constant="22" id="3pF-bg-xgP"/>
+                <constraint firstItem="AZw-Sx-zJ0" firstAttribute="bottom" secondItem="Kf2-9t-GTg" secondAttribute="bottom" constant="10" id="9rN-Y1-mIT"/>
+                <constraint firstItem="Kf2-9t-GTg" firstAttribute="top" secondItem="BG3-gj-myY" secondAttribute="top" constant="17" id="GC4-iG-Xhj"/>
+                <constraint firstItem="Zph-MZ-WgC" firstAttribute="top" secondItem="BG3-gj-myY" secondAttribute="top" constant="22" id="Nhd-BF-MeN"/>
+                <constraint firstItem="FIN-6X-8qv" firstAttribute="leading" secondItem="Kf2-9t-GTg" secondAttribute="trailing" constant="50" id="QZg-fg-jcu"/>
+                <constraint firstItem="Kf2-9t-GTg" firstAttribute="leading" secondItem="AZw-Sx-zJ0" secondAttribute="leading" constant="10" id="RSz-Az-juV"/>
+                <constraint firstItem="oeI-jD-uaV" firstAttribute="leading" secondItem="Zph-MZ-WgC" secondAttribute="trailing" constant="35" id="YNg-ej-6Oz"/>
+                <constraint firstItem="FIN-6X-8qv" firstAttribute="top" secondItem="BG3-gj-myY" secondAttribute="top" constant="22" id="jSe-7F-vBS"/>
+                <constraint firstAttribute="trailing" secondItem="oeI-jD-uaV" secondAttribute="trailing" constant="10" id="tZ1-Sj-2Xy"/>
+                <constraint firstItem="Zph-MZ-WgC" firstAttribute="leading" secondItem="FIN-6X-8qv" secondAttribute="trailing" constant="35" id="tgm-Uz-cZ4"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="140.57971014492756" y="-174.10714285714286"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="checkBoxNotSelected">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="colorTitleDarkBlue">
+            <color red="0.015686274509803921" green="0.13725490196078433" blue="0.30588235294117649" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

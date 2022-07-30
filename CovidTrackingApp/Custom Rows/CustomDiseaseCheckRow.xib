@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CustomDiseaseCheckRow" customModule="CovidTrackingApp" customModuleProvider="target">
+            <connections>
+                <outlet property="btnLeft" destination="N7v-gF-7oI" id="1MO-Ow-UeW"/>
+                <outlet property="btnRight" destination="2ml-2z-3De" id="Zt6-T5-2BI"/>
+                <outlet property="lblLeft" destination="kt4-eH-ueK" id="oCv-oJ-Uku"/>
+                <outlet property="lblRight" destination="hyu-G7-QWK" id="Nv7-Ev-tl6"/>
+                <outlet property="lblTitle" destination="QPq-Sn-pXF" id="nup-yb-1Na"/>
+                <outlet property="vwLeft" destination="gvN-1r-U0p" id="xAG-mb-ao9"/>
+                <outlet property="vwLeftInner" destination="ftZ-E6-8rd" id="uo4-d2-8IT"/>
+                <outlet property="vwRight" destination="mxz-tM-QFc" id="fDv-Hm-vRo"/>
+                <outlet property="vwRightInner" destination="5hD-MJ-8lE" id="KV3-eg-Jh0"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="SkK-2b-Isc">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="70"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QPq-Sn-pXF">
+                    <rect key="frame" x="10" y="15" width="244" height="40"/>
+                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                    <color key="textColor" name="titleBlack"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mxz-tM-QFc">
+                    <rect key="frame" x="349" y="22.5" width="25" height="25"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5hD-MJ-8lE">
+                            <rect key="frame" x="6.5" y="6.5" width="12" height="12"/>
+                            <color key="backgroundColor" name="checkBoxNotSelected"/>
+                        </view>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2ml-2z-3De">
+                            <rect key="frame" x="0.0" y="0.0" width="25" height="25"/>
+                            <connections>
+                                <action selector="btnLeftPressed:" destination="-1" eventType="touchUpInside" id="7Dk-nJ-jXB"/>
+                                <action selector="btnRightPressed:" destination="-1" eventType="touchUpInside" id="5e4-MT-uqr"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" name="checkBoxNotSelected"/>
+                    <constraints>
+                        <constraint firstItem="2ml-2z-3De" firstAttribute="width" secondItem="mxz-tM-QFc" secondAttribute="width" id="01a-RM-NYN"/>
+                        <constraint firstAttribute="height" constant="25" id="4cD-jZ-fF0"/>
+                        <constraint firstItem="5hD-MJ-8lE" firstAttribute="width" secondItem="mxz-tM-QFc" secondAttribute="width" multiplier="0.48" id="Bvs-Zs-MoH"/>
+                        <constraint firstAttribute="width" constant="25" id="FZi-Y7-9fB"/>
+                        <constraint firstItem="2ml-2z-3De" firstAttribute="centerY" secondItem="mxz-tM-QFc" secondAttribute="centerY" id="OtW-R6-o36"/>
+                        <constraint firstItem="5hD-MJ-8lE" firstAttribute="centerY" secondItem="mxz-tM-QFc" secondAttribute="centerY" id="Owy-xs-4dL"/>
+                        <constraint firstItem="2ml-2z-3De" firstAttribute="height" secondItem="mxz-tM-QFc" secondAttribute="height" id="Y1s-e8-pWt"/>
+                        <constraint firstItem="5hD-MJ-8lE" firstAttribute="centerX" secondItem="mxz-tM-QFc" secondAttribute="centerX" id="mDy-cR-QqM"/>
+                        <constraint firstItem="2ml-2z-3De" firstAttribute="centerX" secondItem="mxz-tM-QFc" secondAttribute="centerX" id="q8q-hE-den"/>
+                        <constraint firstItem="5hD-MJ-8lE" firstAttribute="height" secondItem="mxz-tM-QFc" secondAttribute="height" multiplier="0.48" id="yx8-ZH-4Or"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gvN-1r-U0p">
+                    <rect key="frame" x="274" y="22.5" width="25" height="25"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ftZ-E6-8rd">
+                            <rect key="frame" x="6.5" y="6.5" width="12" height="12"/>
+                            <color key="backgroundColor" name="checkBoxNotSelected"/>
+                        </view>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N7v-gF-7oI">
+                            <rect key="frame" x="0.0" y="0.0" width="25" height="25"/>
+                            <connections>
+                                <action selector="btnLeftPressed:" destination="-1" eventType="touchUpInside" id="cfn-cQ-oAA"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" name="checkBoxNotSelected"/>
+                    <constraints>
+                        <constraint firstItem="ftZ-E6-8rd" firstAttribute="height" secondItem="gvN-1r-U0p" secondAttribute="height" multiplier="0.48" id="61J-rJ-ZYG"/>
+                        <constraint firstItem="N7v-gF-7oI" firstAttribute="width" secondItem="gvN-1r-U0p" secondAttribute="width" id="DfI-z6-cyT"/>
+                        <constraint firstItem="ftZ-E6-8rd" firstAttribute="centerY" secondItem="gvN-1r-U0p" secondAttribute="centerY" id="EWA-3u-eUz"/>
+                        <constraint firstAttribute="width" constant="25" id="HrZ-YE-T2c"/>
+                        <constraint firstItem="N7v-gF-7oI" firstAttribute="centerY" secondItem="gvN-1r-U0p" secondAttribute="centerY" id="LKB-Jz-lLz"/>
+                        <constraint firstItem="ftZ-E6-8rd" firstAttribute="width" secondItem="gvN-1r-U0p" secondAttribute="width" multiplier="0.48" id="Pua-rn-1qG"/>
+                        <constraint firstItem="N7v-gF-7oI" firstAttribute="height" secondItem="gvN-1r-U0p" secondAttribute="height" id="eb2-Hj-H6G"/>
+                        <constraint firstItem="N7v-gF-7oI" firstAttribute="centerX" secondItem="gvN-1r-U0p" secondAttribute="centerX" id="o7X-1c-bkb"/>
+                        <constraint firstItem="ftZ-E6-8rd" firstAttribute="centerX" secondItem="gvN-1r-U0p" secondAttribute="centerX" id="s92-OQ-6cS"/>
+                        <constraint firstAttribute="height" constant="25" id="vIo-I0-VGU"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kt4-eH-ueK">
+                    <rect key="frame" x="304" y="27.5" width="32" height="15"/>
+                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
+                    <color key="textColor" name="titleBlack"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hyu-G7-QWK">
+                    <rect key="frame" x="379" y="27.5" width="32" height="15"/>
+                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
+                    <color key="textColor" name="titleBlack"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8dE-vC-ppK">
+                    <rect key="frame" x="10" y="69" width="401" height="1"/>
+                    <color key="backgroundColor" name="textFieldPlaceholderColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="1IF-zu-uAb"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="owY-2d-rAd"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="QPq-Sn-pXF" firstAttribute="leading" secondItem="SkK-2b-Isc" secondAttribute="leading" constant="10" id="03a-eJ-KgD"/>
+                <constraint firstItem="owY-2d-rAd" firstAttribute="bottom" secondItem="gvN-1r-U0p" secondAttribute="bottom" constant="22.5" id="05h-iB-MoM"/>
+                <constraint firstItem="QPq-Sn-pXF" firstAttribute="top" secondItem="SkK-2b-Isc" secondAttribute="top" constant="15" id="281-yG-tjE"/>
+                <constraint firstItem="gvN-1r-U0p" firstAttribute="top" secondItem="SkK-2b-Isc" secondAttribute="top" constant="22.5" id="4eg-Yt-qjk"/>
+                <constraint firstItem="hyu-G7-QWK" firstAttribute="top" secondItem="SkK-2b-Isc" secondAttribute="top" constant="27.5" id="51o-A5-reB"/>
+                <constraint firstItem="mxz-tM-QFc" firstAttribute="top" secondItem="SkK-2b-Isc" secondAttribute="top" constant="22.5" id="EIg-GD-Wmh"/>
+                <constraint firstItem="owY-2d-rAd" firstAttribute="bottom" secondItem="QPq-Sn-pXF" secondAttribute="bottom" constant="15" id="KMk-F8-pBQ"/>
+                <constraint firstItem="owY-2d-rAd" firstAttribute="bottom" secondItem="hyu-G7-QWK" secondAttribute="bottom" constant="27.5" id="L5I-ej-lIS"/>
+                <constraint firstItem="8dE-vC-ppK" firstAttribute="trailing" secondItem="hyu-G7-QWK" secondAttribute="trailing" id="Lt1-5x-ZsY"/>
+                <constraint firstItem="owY-2d-rAd" firstAttribute="bottom" secondItem="mxz-tM-QFc" secondAttribute="bottom" constant="22.5" id="PTF-4D-Vxv"/>
+                <constraint firstItem="hyu-G7-QWK" firstAttribute="leading" secondItem="mxz-tM-QFc" secondAttribute="trailing" constant="5" id="VCe-cR-3ve"/>
+                <constraint firstItem="kt4-eH-ueK" firstAttribute="leading" secondItem="gvN-1r-U0p" secondAttribute="trailing" constant="5" id="aI5-pw-BBD"/>
+                <constraint firstItem="8dE-vC-ppK" firstAttribute="leading" secondItem="QPq-Sn-pXF" secondAttribute="leading" id="bLF-Ck-dZs"/>
+                <constraint firstItem="owY-2d-rAd" firstAttribute="bottom" secondItem="kt4-eH-ueK" secondAttribute="bottom" constant="27.5" id="jGl-7f-wfr"/>
+                <constraint firstItem="kt4-eH-ueK" firstAttribute="top" secondItem="SkK-2b-Isc" secondAttribute="top" constant="27.5" id="nUe-ZF-eeX"/>
+                <constraint firstItem="owY-2d-rAd" firstAttribute="trailing" secondItem="mxz-tM-QFc" secondAttribute="trailing" constant="40" id="u8I-3A-8dF"/>
+                <constraint firstItem="owY-2d-rAd" firstAttribute="bottom" secondItem="8dE-vC-ppK" secondAttribute="bottom" id="wAC-Fj-0QQ"/>
+                <constraint firstItem="mxz-tM-QFc" firstAttribute="leading" secondItem="gvN-1r-U0p" secondAttribute="trailing" constant="50" id="yNf-6n-MO0"/>
+                <constraint firstItem="gvN-1r-U0p" firstAttribute="leading" secondItem="QPq-Sn-pXF" secondAttribute="trailing" constant="20" id="zOQ-Ty-mpS"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="140.57971014492756" y="-174.10714285714286"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="checkBoxNotSelected">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="textFieldPlaceholderColor">
+            <color red="0.15686274509803921" green="0.15686274509803921" blue="0.15686274509803921" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="titleBlack">
+            <color red="0.11764705882352941" green="0.11764705882352941" blue="0.11764705882352941" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

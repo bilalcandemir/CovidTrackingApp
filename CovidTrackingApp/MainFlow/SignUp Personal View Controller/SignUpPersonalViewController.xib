@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SignUpPersonalViewController" customModule="CovidTrackingApp" customModuleProvider="target">
+            <connections>
+                <outlet property="stckMain" destination="nIz-sr-hE9" id="63H-Cr-17v"/>
+                <outlet property="view" destination="bkk-XM-qHc" id="L1v-nv-C9I"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="bkk-XM-qHc">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WwT-IH-ro9">
+                    <rect key="frame" x="63" y="378" width="240" height="128"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="nIz-sr-hE9">
+                            <rect key="frame" x="0.0" y="-36" width="414" height="200"/>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="nIz-sr-hE9" firstAttribute="centerX" secondItem="Y5m-hJ-eQ1" secondAttribute="centerX" id="5El-TC-3jW"/>
+                        <constraint firstItem="nIz-sr-hE9" firstAttribute="width" secondItem="Y5m-hJ-eQ1" secondAttribute="width" id="S5Y-91-wXK"/>
+                        <constraint firstAttribute="bottom" secondItem="nIz-sr-hE9" secondAttribute="bottom" id="YIs-6h-WQj"/>
+                        <constraint firstItem="nIz-sr-hE9" firstAttribute="top" secondItem="WwT-IH-ro9" secondAttribute="top" id="xu3-qT-eDh"/>
+                    </constraints>
+                    <viewLayoutGuide key="contentLayoutGuide" id="fmO-mp-AKY"/>
+                    <viewLayoutGuide key="frameLayoutGuide" id="Y5m-hJ-eQ1"/>
+                </scrollView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="Gof-To-dVN"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="WwT-IH-ro9" firstAttribute="top" secondItem="Gof-To-dVN" secondAttribute="top" id="WXm-c1-UtO"/>
+                <constraint firstItem="Gof-To-dVN" firstAttribute="trailing" secondItem="WwT-IH-ro9" secondAttribute="trailing" id="YGz-pd-h7x"/>
+                <constraint firstItem="WwT-IH-ro9" firstAttribute="leading" secondItem="Gof-To-dVN" secondAttribute="leading" id="ZnD-Tl-bv4"/>
+                <constraint firstItem="Gof-To-dVN" firstAttribute="bottom" secondItem="WwT-IH-ro9" secondAttribute="bottom" id="fZ3-ub-eKN"/>
+            </constraints>
+            <point key="canvasLocation" x="141" y="106"/>
+        </view>
+    </objects>
+</document>

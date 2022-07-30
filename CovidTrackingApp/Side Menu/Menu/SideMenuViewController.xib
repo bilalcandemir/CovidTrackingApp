@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SideMenuViewController" customModule="CovidTrackingApp" customModuleProvider="target">
+            <connections>
+                <outlet property="imgMain" destination="Iqz-Mr-oJ6" id="tfc-ZS-cZH"/>
+                <outlet property="lblName" destination="TQl-4j-9it" id="8qX-RB-acR"/>
+                <outlet property="tblMain" destination="hwE-9g-SVF" id="ZyH-ax-sKO"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KT6-1x-LvA">
+                    <rect key="frame" x="0.0" y="203" width="414" height="500"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="userAvatar" translatesAutoresizingMaskIntoConstraints="NO" id="Iqz-Mr-oJ6">
+                            <rect key="frame" x="15" y="10" width="35" height="35"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="35" id="RAB-38-0E0"/>
+                                <constraint firstAttribute="width" constant="35" id="ome-LI-uKR"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ahmet Bilal Candemir" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TQl-4j-9it">
+                            <rect key="frame" x="60" y="17.5" width="164" height="20.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" name="checkBoxNotSelected"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hwE-9g-SVF">
+                            <rect key="frame" x="0.0" y="85" width="414" height="415"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="tintColor" name="titleBlack"/>
+                            <color key="sectionIndexColor" name="titleBlack"/>
+                        </tableView>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="Iqz-Mr-oJ6" firstAttribute="top" secondItem="KT6-1x-LvA" secondAttribute="top" constant="10" id="9as-sE-tpf"/>
+                        <constraint firstItem="hwE-9g-SVF" firstAttribute="top" secondItem="Iqz-Mr-oJ6" secondAttribute="bottom" constant="40" id="L0r-7b-ks4"/>
+                        <constraint firstItem="Iqz-Mr-oJ6" firstAttribute="leading" secondItem="KT6-1x-LvA" secondAttribute="leading" constant="15" id="QiM-nd-OhO"/>
+                        <constraint firstItem="hwE-9g-SVF" firstAttribute="leading" secondItem="KT6-1x-LvA" secondAttribute="leading" id="hup-rE-8J5"/>
+                        <constraint firstItem="TQl-4j-9it" firstAttribute="centerY" secondItem="Iqz-Mr-oJ6" secondAttribute="centerY" id="oll-LS-L5Q"/>
+                        <constraint firstAttribute="bottom" secondItem="hwE-9g-SVF" secondAttribute="bottom" id="pXk-aG-xXb"/>
+                        <constraint firstItem="TQl-4j-9it" firstAttribute="leading" secondItem="Iqz-Mr-oJ6" secondAttribute="trailing" constant="10" id="v8u-I0-TOS"/>
+                        <constraint firstAttribute="height" constant="500" id="wBA-or-pTh"/>
+                        <constraint firstAttribute="trailing" secondItem="hwE-9g-SVF" secondAttribute="trailing" id="xSw-9z-fsO"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" name="menuBackground"/>
+            <constraints>
+                <constraint firstItem="KT6-1x-LvA" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="INC-Er-78A"/>
+                <constraint firstItem="KT6-1x-LvA" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" id="ZAu-Y2-Geu"/>
+                <constraint firstItem="KT6-1x-LvA" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="ibh-dz-S7W"/>
+            </constraints>
+            <point key="canvasLocation" x="137.68115942028987" y="95.758928571428569"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="userAvatar" width="256" height="256"/>
+        <namedColor name="checkBoxNotSelected">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="menuBackground">
+            <color red="0.2196078431372549" green="0.2196078431372549" blue="0.2196078431372549" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="titleBlack">
+            <color red="0.11764705882352941" green="0.11764705882352941" blue="0.11764705882352941" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

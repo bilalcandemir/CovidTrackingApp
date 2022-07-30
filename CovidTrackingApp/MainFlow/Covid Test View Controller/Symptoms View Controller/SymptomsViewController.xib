@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SymptomsViewController" customModule="CovidTrackingApp" customModuleProvider="target">
+            <connections>
+                <outlet property="stckMain" destination="AKE-Nm-CPQ" id="Jst-cV-N64"/>
+                <outlet property="view" destination="Ilp-Ck-g9O" id="SVe-kZ-d9s"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="Ilp-Ck-g9O">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HXc-rE-U0w">
+                    <rect key="frame" x="63" y="378" width="240" height="128"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="AKE-Nm-CPQ">
+                            <rect key="frame" x="0.0" y="-36" width="414" height="200"/>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="AKE-Nm-CPQ" firstAttribute="width" secondItem="7Qc-SW-Kxi" secondAttribute="width" id="NNe-Ms-qJR"/>
+                        <constraint firstAttribute="bottom" secondItem="AKE-Nm-CPQ" secondAttribute="bottom" id="Q0M-Im-BKW"/>
+                        <constraint firstItem="AKE-Nm-CPQ" firstAttribute="centerX" secondItem="7Qc-SW-Kxi" secondAttribute="centerX" id="fvi-tT-nYG"/>
+                        <constraint firstItem="AKE-Nm-CPQ" firstAttribute="top" secondItem="HXc-rE-U0w" secondAttribute="top" id="oje-Mc-QTg"/>
+                    </constraints>
+                    <viewLayoutGuide key="contentLayoutGuide" id="qIV-g3-RAP"/>
+                    <viewLayoutGuide key="frameLayoutGuide" id="7Qc-SW-Kxi"/>
+                </scrollView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="wRw-Cq-XVm"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="HXc-rE-U0w" firstAttribute="top" secondItem="wRw-Cq-XVm" secondAttribute="top" id="BJ6-Hd-qyB"/>
+                <constraint firstItem="wRw-Cq-XVm" firstAttribute="bottom" secondItem="HXc-rE-U0w" secondAttribute="bottom" id="LUV-2x-Z4b"/>
+                <constraint firstItem="HXc-rE-U0w" firstAttribute="leading" secondItem="wRw-Cq-XVm" secondAttribute="leading" id="SOJ-73-3Yd"/>
+                <constraint firstItem="wRw-Cq-XVm" firstAttribute="trailing" secondItem="HXc-rE-U0w" secondAttribute="trailing" id="go8-hT-TJ1"/>
+            </constraints>
+            <point key="canvasLocation" x="141" y="106"/>
+        </view>
+    </objects>
+</document>

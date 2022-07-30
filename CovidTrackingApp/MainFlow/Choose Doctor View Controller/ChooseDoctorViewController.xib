@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ChooseDoctorViewController" customModule="CovidTrackingApp" customModuleProvider="target">
+            <connections>
+                <outlet property="btnChoose" destination="2xU-LO-iRh" id="v2V-jG-OkZ"/>
+                <outlet property="cltnMain" destination="oHi-Q4-FRP" id="KYV-rE-ouz"/>
+                <outlet property="view" destination="Pe1-RA-EWa" id="qrv-WG-Ptg"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="Pe1-RA-EWa">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="oHi-Q4-FRP">
+                    <rect key="frame" x="0.0" y="44" width="414" height="775"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="5gP-bP-RBa">
+                        <size key="itemSize" width="128" height="128"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2xU-LO-iRh">
+                    <rect key="frame" x="100" y="827" width="214" height="40"/>
+                    <color key="backgroundColor" name="textFieldPlaceholderColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="Rhb-FV-dF0"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                    <state key="normal" title="Choose Doctor">
+                        <color key="titleColor" name="checkBoxNotSelected"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="10"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="choosePressed:" destination="-1" eventType="touchUpInside" id="b5m-lJ-ihq"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="5JU-KL-oNX"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="2xU-LO-iRh" secondAttribute="bottom" constant="29" id="Ksa-pU-ZHn"/>
+                <constraint firstItem="5JU-KL-oNX" firstAttribute="trailing" secondItem="oHi-Q4-FRP" secondAttribute="trailing" id="PGe-eP-sRF"/>
+                <constraint firstItem="2xU-LO-iRh" firstAttribute="leading" secondItem="5JU-KL-oNX" secondAttribute="leading" constant="100" id="UOZ-FX-KPI"/>
+                <constraint firstItem="5JU-KL-oNX" firstAttribute="trailing" secondItem="2xU-LO-iRh" secondAttribute="trailing" constant="100" id="eag-Dq-QF0"/>
+                <constraint firstItem="oHi-Q4-FRP" firstAttribute="leading" secondItem="5JU-KL-oNX" secondAttribute="leading" id="pft-pI-M38"/>
+                <constraint firstItem="oHi-Q4-FRP" firstAttribute="top" secondItem="5JU-KL-oNX" secondAttribute="top" id="pjq-ux-9Dc"/>
+                <constraint firstItem="2xU-LO-iRh" firstAttribute="top" secondItem="oHi-Q4-FRP" secondAttribute="bottom" constant="8" symbolic="YES" id="vTf-a4-n2n"/>
+            </constraints>
+            <point key="canvasLocation" x="140.57971014492756" y="105.80357142857143"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="checkBoxNotSelected">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="textFieldPlaceholderColor">
+            <color red="0.15686274509803921" green="0.15686274509803921" blue="0.15686274509803921" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

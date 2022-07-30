@@ -7,7 +7,25 @@
 		<key>CovidTrackingApp.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>0</integer>
+			<integer>8</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>56BB8EE025D94AEE00AE5CC5</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>56BB8EF925D94AF300AE5CC5</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>56BB8F0425D94AF300AE5CC5</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>

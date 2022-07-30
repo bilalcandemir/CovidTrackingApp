@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CheckFeverViewController" customModule="CovidTrackingApp" customModuleProvider="target">
+            <connections>
+                <outlet property="lblSelectArea" destination="heP-lZ-rbA" id="aA4-Qr-0aU"/>
+                <outlet property="lblSelectTemperature" destination="Dk2-75-soV" id="s1v-6Y-3F3"/>
+                <outlet property="txtChooseArea" destination="FMJ-Vx-TO6" id="SmW-kt-Yav"/>
+                <outlet property="txtChooseTemperature" destination="xvx-7C-o0K" id="Onn-Iy-bHM"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please Select Your Body Temperature" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dk2-75-soV">
+                    <rect key="frame" x="20" y="44" width="374" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" name="textFieldBorderColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Choose Your Body Temp." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xvx-7C-o0K">
+                    <rect key="frame" x="100" y="70" width="214" height="34"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please Select Area of Measurement" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="heP-lZ-rbA">
+                    <rect key="frame" x="20" y="174" width="374" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" name="textFieldBorderColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Choose Measurement Area" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FMJ-Vx-TO6">
+                    <rect key="frame" x="100" y="200" width="214" height="34"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="FMJ-Vx-TO6" firstAttribute="top" secondItem="heP-lZ-rbA" secondAttribute="bottom" constant="5" id="8WL-vg-BP1"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="xvx-7C-o0K" secondAttribute="trailing" constant="100" id="9KN-eu-1z0"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="FMJ-Vx-TO6" secondAttribute="trailing" constant="100" id="B28-N1-qrH"/>
+                <constraint firstItem="Dk2-75-soV" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="F53-Nw-YGy"/>
+                <constraint firstItem="Dk2-75-soV" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="OKe-vK-xHj"/>
+                <constraint firstItem="heP-lZ-rbA" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="QDV-ab-jO6"/>
+                <constraint firstItem="heP-lZ-rbA" firstAttribute="top" secondItem="xvx-7C-o0K" secondAttribute="bottom" constant="70" id="c2n-Xf-7UX"/>
+                <constraint firstItem="xvx-7C-o0K" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="100" id="cj6-9x-eGM"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="heP-lZ-rbA" secondAttribute="trailing" constant="20" id="hM0-sR-3oz"/>
+                <constraint firstItem="FMJ-Vx-TO6" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="100" id="hbF-fc-YmE"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Dk2-75-soV" secondAttribute="trailing" constant="20" id="ofj-6q-1Vb"/>
+                <constraint firstItem="xvx-7C-o0K" firstAttribute="top" secondItem="Dk2-75-soV" secondAttribute="bottom" constant="5" id="pzK-e7-TnG"/>
+            </constraints>
+            <point key="canvasLocation" x="59" y="80"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="textFieldBorderColor">
+            <color red="0.015686274509803921" green="0.13725490196078433" blue="0.19607843137254902" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

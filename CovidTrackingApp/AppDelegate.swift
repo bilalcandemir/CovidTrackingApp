@@ -7,30 +7,56 @@
 
 import UIKit
 import CoreData
-
+import IQKeyboardManagerSwift
+import SideMenu
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
+    
+    var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        IQKeyboardManager.shared.enable = true
+        
+        ///reset application badge number
+        UIApplication.shared.applicationIconBadgeNumber = 0
+        ///init window
+        window = UIWindow(frame: UIScreen.main.bounds)
+        ///give a background color for window
+        window?.backgroundColor = .white
+        
+        
+        
+        
+        openMain()
+        
+        self.window?.makeKeyAndVisible()
+        
         return true
     }
-
-    // MARK: UISceneSession Lifecycle
-
-    func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
-        // Called when a new scene session is being created.
-        // Use this method to select a configuration to create the new scene with.
-        return UISceneConfiguration(name: "Default Configuration", sessionRole: connectingSceneSession.role)
+    
+    func openLogin(){
+        // Get Login Storyboard
+        let storyboard = UIStoryboard.init(name: "LoginMain", bundle: nil)
+        // Get initial view controller (AppMainNavigationViewControll<LoginPhoneNumberViewController>)
+        let nav = storyboard.instantiateInitialViewController()
+        // Animate window transtion
+        UIView.transition(with: self.window!, duration: 0.3, options: UIView.AnimationOptions.transitionCrossDissolve, animations: {
+            self.window?.rootViewController = nav
+        }, completion: nil)
+    }
+    
+    func openMain(){
+        let main = MainScreenViewController()
+        // Animate window transtion
+        UIView.transition(with: self.window!, duration: 0.3, options: UIView.AnimationOptions.transitionCrossDissolve, animations: {
+            self.window?.rootViewController = SideNavigationController(rootViewController: main)
+        }, completion: nil)
     }
 
-    func application(_ application: UIApplication, didDiscardSceneSessions sceneSessions: Set<UISceneSession>) {
-        // Called when the user discards a scene session.
-        // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
-        // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
-    }
+
+    
 
     // MARK: - Core Data stack
 

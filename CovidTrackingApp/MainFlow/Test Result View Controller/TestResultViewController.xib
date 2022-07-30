@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TestResultViewController" customModule="CovidTrackingApp" customModuleProvider="target">
+            <connections>
+                <outlet property="btnHome" destination="gdH-2B-Mou" id="wtB-hb-8gC"/>
+                <outlet property="imgMain" destination="e12-xl-f64" id="kE4-ZF-s9I"/>
+                <outlet property="lblDate" destination="YAQ-47-tTK" id="sKU-QQ-B9A"/>
+                <outlet property="lblProbablityvalue" destination="hqV-ej-Vy3" id="JgR-m3-NfH"/>
+                <outlet property="tblMain" destination="aXw-j9-Bvt" id="eKs-xV-YuS"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cough" translatesAutoresizingMaskIntoConstraints="NO" id="e12-xl-f64">
+                    <rect key="frame" x="132" y="44" width="150" height="120"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="e12-xl-f64" secondAttribute="height" multiplier="5:4" id="X1P-cQ-9To"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hqV-ej-Vy3">
+                    <rect key="frame" x="70" y="174" width="274" height="21"/>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                    <color key="textColor" name="textFieldBorderColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YAQ-47-tTK">
+                    <rect key="frame" x="90" y="205" width="234" height="18"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" name="checkBoxSelected"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="aXw-j9-Bvt">
+                    <rect key="frame" x="20" y="243" width="374" height="200"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="200" id="hbo-1F-2dJ"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="10"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </tableView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Akd-2b-ywf" userLabel="TestResult">
+                    <rect key="frame" x="264" y="478" width="100" height="45"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Test History" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XpE-qr-K91">
+                            <rect key="frame" x="0.0" y="0.0" width="100" height="45"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <color key="textColor" name="checkBoxBorder"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t6H-BH-PiY">
+                            <rect key="frame" x="0.0" y="0.0" width="100" height="45"/>
+                            <connections>
+                                <action selector="testHistoryPressed:" destination="-1" eventType="touchUpInside" id="Z14-O0-MPZ"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" name="checkBoxSelected"/>
+                    <constraints>
+                        <constraint firstItem="t6H-BH-PiY" firstAttribute="top" secondItem="Akd-2b-ywf" secondAttribute="top" id="Mlo-pQ-ggu"/>
+                        <constraint firstItem="t6H-BH-PiY" firstAttribute="leading" secondItem="Akd-2b-ywf" secondAttribute="leading" id="OJy-ng-Pb1"/>
+                        <constraint firstAttribute="trailing" secondItem="t6H-BH-PiY" secondAttribute="trailing" id="ZSA-9D-gGE"/>
+                        <constraint firstItem="XpE-qr-K91" firstAttribute="top" secondItem="Akd-2b-ywf" secondAttribute="top" id="agR-nH-lE4"/>
+                        <constraint firstAttribute="width" constant="100" id="bP6-PW-RT8"/>
+                        <constraint firstAttribute="height" constant="45" id="bVV-jS-cop"/>
+                        <constraint firstAttribute="bottom" secondItem="XpE-qr-K91" secondAttribute="bottom" id="ci2-Q4-RR1"/>
+                        <constraint firstItem="XpE-qr-K91" firstAttribute="leading" secondItem="Akd-2b-ywf" secondAttribute="leading" id="hNI-Gy-TyH"/>
+                        <constraint firstAttribute="bottom" secondItem="t6H-BH-PiY" secondAttribute="bottom" id="j7J-NK-4Wk"/>
+                        <constraint firstAttribute="trailing" secondItem="XpE-qr-K91" secondAttribute="trailing" id="o3C-M7-c0P"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="10"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gdH-2B-Mou" userLabel="HomeButton">
+                    <rect key="frame" x="182" y="543" width="50" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="HkQ-Un-0hS"/>
+                        <constraint firstAttribute="width" constant="50" id="N8d-Gi-1eI"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                    <color key="tintColor" name="colorTitleDarkBlue"/>
+                    <state key="normal">
+                        <imageReference key="image" image="house" catalog="system" symbolScale="large"/>
+                    </state>
+                    <connections>
+                        <action selector="homePressed:" destination="-1" eventType="touchUpInside" id="5h4-Jc-uab"/>
+                    </connections>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dzF-VN-uTa" userLabel="SendResult">
+                    <rect key="frame" x="50" y="478" width="100" height="45"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Send Results To Doctor" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Owi-5F-xak">
+                            <rect key="frame" x="0.0" y="0.0" width="100" height="45"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                            <color key="textColor" name="checkBoxBorder"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V09-6Y-jjC">
+                            <rect key="frame" x="0.0" y="0.0" width="100" height="45"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                            <connections>
+                                <action selector="sendResultPressed:" destination="-1" eventType="touchUpInside" id="mvh-UK-6Bp"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" name="checkBoxSelected"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="Owi-5F-xak" secondAttribute="trailing" id="1YJ-ne-UTA"/>
+                        <constraint firstAttribute="bottom" secondItem="Owi-5F-xak" secondAttribute="bottom" id="2Vv-Vz-ucc"/>
+                        <constraint firstAttribute="trailing" secondItem="V09-6Y-jjC" secondAttribute="trailing" id="9Lm-24-dKl"/>
+                        <constraint firstItem="V09-6Y-jjC" firstAttribute="top" secondItem="dzF-VN-uTa" secondAttribute="top" id="GqH-rm-NRN"/>
+                        <constraint firstAttribute="width" constant="100" id="LCP-ZV-JAO"/>
+                        <constraint firstItem="Owi-5F-xak" firstAttribute="top" secondItem="dzF-VN-uTa" secondAttribute="top" id="NpK-4k-dr1"/>
+                        <constraint firstItem="V09-6Y-jjC" firstAttribute="leading" secondItem="dzF-VN-uTa" secondAttribute="leading" id="TsN-fu-2IR"/>
+                        <constraint firstAttribute="height" constant="45" id="XYS-m2-PgM"/>
+                        <constraint firstAttribute="bottom" secondItem="V09-6Y-jjC" secondAttribute="bottom" id="aA0-7Z-bkM"/>
+                        <constraint firstItem="Owi-5F-xak" firstAttribute="leading" secondItem="dzF-VN-uTa" secondAttribute="leading" id="ciW-ZG-n35"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="10"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="aXw-j9-Bvt" firstAttribute="top" secondItem="YAQ-47-tTK" secondAttribute="bottom" constant="20" id="0Md-au-NSb"/>
+                <constraint firstItem="gdH-2B-Mou" firstAttribute="top" secondItem="aXw-j9-Bvt" secondAttribute="bottom" constant="100" id="5h5-qS-bgy"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="e12-xl-f64" secondAttribute="trailing" constant="132" id="7Gg-yj-LeW"/>
+                <constraint firstItem="e12-xl-f64" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="BTP-rA-m6Z"/>
+                <constraint firstItem="YAQ-47-tTK" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="90" id="Ddb-y6-3ZQ"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="aXw-j9-Bvt" secondAttribute="trailing" constant="20" id="HU2-7U-96C"/>
+                <constraint firstItem="dzF-VN-uTa" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="50" id="IuR-q9-Sno"/>
+                <constraint firstItem="hqV-ej-Vy3" firstAttribute="top" secondItem="e12-xl-f64" secondAttribute="bottom" constant="10" id="K2p-A2-SbY"/>
+                <constraint firstItem="gdH-2B-Mou" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="Oey-SP-YyZ"/>
+                <constraint firstItem="YAQ-47-tTK" firstAttribute="top" secondItem="hqV-ej-Vy3" secondAttribute="bottom" constant="10" id="Sc5-Tp-GOm"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Akd-2b-ywf" secondAttribute="trailing" constant="50" id="Y7m-nR-1dT"/>
+                <constraint firstItem="hqV-ej-Vy3" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="70" id="YIv-U4-no2"/>
+                <constraint firstItem="e12-xl-f64" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="132" id="aHJ-Q4-YpL"/>
+                <constraint firstItem="Akd-2b-ywf" firstAttribute="top" secondItem="aXw-j9-Bvt" secondAttribute="bottom" constant="35" id="cx0-23-opD"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="hqV-ej-Vy3" secondAttribute="trailing" constant="70" id="iil-ZR-Rue"/>
+                <constraint firstItem="dzF-VN-uTa" firstAttribute="top" secondItem="aXw-j9-Bvt" secondAttribute="bottom" constant="35" id="iro-AH-eoq"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="YAQ-47-tTK" secondAttribute="trailing" constant="90" id="nVY-VW-FRD"/>
+                <constraint firstItem="aXw-j9-Bvt" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="yIq-6G-7kl"/>
+            </constraints>
+            <point key="canvasLocation" x="21.739130434782609" y="109.82142857142857"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="cough" width="512" height="512"/>
+        <image name="house" catalog="system" width="128" height="106"/>
+        <namedColor name="checkBoxBorder">
+            <color red="0.9137254901960784" green="0.92156862745098034" blue="0.92156862745098034" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="checkBoxSelected">
+            <color red="0.18823529411764706" green="0.21568627450980393" blue="0.28627450980392155" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="colorTitleDarkBlue">
+            <color red="0.015686274509803921" green="0.13725490196078433" blue="0.30588235294117649" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="textFieldBorderColor">
+            <color red="0.015686274509803921" green="0.13725490196078433" blue="0.19607843137254902" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
